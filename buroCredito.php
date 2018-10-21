@@ -20,7 +20,7 @@
 </tns:creditoRequest>';
 	// Grabamos el XML en el servidor como un fichero plano, para
 	// poder ser leido por otra aplicación.
-	$nombrearchivo = "infcliente.xml";
+	$nombrearchivo = "credito.xml";
 	$gestor = fopen($nombrearchivo, 'w+');
 	fwrite($gestor, $xml);
 	fclose($gestor);
