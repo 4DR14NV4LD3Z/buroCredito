@@ -1,3 +1,10 @@
+<html>
+<head>
+<title>Registro Datos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
 <?php
 	// Convertimos la matriz a una cadena con formato XML.
 	$xml = '<?xml version="1.0" encoding="UTF-8"?>
@@ -18,3 +25,9 @@
 	fwrite($gestor, $xml);
 	fclose($gestor);
 ?>
+<section id="contenido">
+<h1>Archivo Creado</h1>
+<button id = "boton" onclick="location.href='index.html'">Crear Nuevamente</button>
+</section>
+</body>
+</html>

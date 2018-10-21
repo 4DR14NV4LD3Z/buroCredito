@@ -1,4 +1,3 @@
-
 body {
 	background: #000000;
 	font-family: tahoma, arial;
@@ -50,4 +49,17 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #45a049;
+}
+#boton{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#contenido {
+    display: contents;
+   justify-content: center;
+   align-items: center;
 }
