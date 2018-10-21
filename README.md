@@ -1,2 +1,2 @@
 # buroCredito
-Pagina en HTML cradora de un XML via PHP
+Pagina en HTML creadora de un XML via PHP
