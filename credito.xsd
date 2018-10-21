@@ -7,8 +7,8 @@
 				<xs:element name="apellidos" type="tns:names"/>
 				<xs:element name="curp" type="tns:curp"/>
 				<xs:element name="domicilio" type="xs:string"/>
-				<xs:element name="salario" type="xs:int"/>
-				<xs:element name="monto" type="xs:int"/>
+				<xs:element name="salario" type="xs:double"/>
+				<xs:element name="monto" type="xs:double"/>
 				<xs:element name="tasaInteres" type="tns:interes"/>
 				<xs:element name="plazo" type="xs:int"/>
 			</xs:sequence>
@@ -25,8 +25,8 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="interes">
-		<xs:restriction base="xs:int">
-			<xs:pattern value="([7-9]{1})|([1-4]{1}[0-9]{1})|([5]{1}[0]{1})"/>
+		<xs:restriction base="xs:double">
+			<xs:pattern value="([7-9]{1}([.]?[\d]+)?)|([1-4]{1}[0-9]{1}([.]?[\d]+)?)|([5]{1}[0]{1})"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
