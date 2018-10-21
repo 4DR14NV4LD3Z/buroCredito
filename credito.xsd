@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://itq.edu/credito" targetNamespace="http://itq.edu/credito" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="creditoRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="tns:names"/>
+				<xs:element name="apellidos" type="tns:names"/>
+				<xs:element name="curp" type="tns:curp"/>
+				<xs:element name="domicilio" type="xs:string"/>
+				<xs:element name="salario" type="xs:int"/>
+				<xs:element name="monto" type="xs:int"/>
+				<xs:element name="tasaInteres" type="tns:interes"/>
+				<xs:element name="plazo" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="names">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^-\\s][a-zA-Z\\s]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="curp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z]{4}[0-9]{6}[A-Za-z]{6}[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="interes">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="([7-9]{1})|([1-4]{1}[0-9]{1})|([5]{1}[0]{1})"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
