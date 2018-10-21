@@ -4,7 +4,8 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="nombre" type="tns:names"/>
-				<xs:element name="apellidos" type="tns:names"/>
+				<xs:element name="apellidoMaterno" type="tns:names"/>
+				<xs:element name="apellidoPaterno" type="tns:names"/>
 				<xs:element name="curp" type="tns:curp"/>
 				<xs:element name="domicilio" type="xs:string"/>
 				<xs:element name="salario" type="xs:double"/>
@@ -16,7 +17,7 @@
 	</xs:element>
 	<xs:simpleType name="names">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[^-\\s][a-zA-Z\\s]+"/>
+			<xs:pattern value="[a-zA-Z\\s]+"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="curp">
